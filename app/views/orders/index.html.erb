@@ -1,5 +1,5 @@
 <div class="container">
-  <% cache do %>
+  <% cache "orders-count-#{Order.count}-#{Order.maximum(:updated_at)}" do %>
       <div class="row">
         <div class="col-sm-12">
           <h1><%= @orders.count %> Orders</h1>
